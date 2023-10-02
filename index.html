@@ -22,7 +22,7 @@
       <!-- ASIDE -->
       <aside>
         <div class="top-aside d-flex justify-content-between align-items-center  ">
-          <div class="top-icon-circle d-flex ">
+          <div class="top-icon-circle d-flex align-items-center">
             <img src="img/avatar_io.jpg" alt="avatar_io">
             <span>Nome</span>
           </div>
@@ -60,7 +60,7 @@
               :src="profile.avatar" alt="avatar_1">
               <div class="info">
                 <h6>{{profile.name}}</h6>
-                <span>Ultimo messaggio inviato</span>
+                <span class="last-message">Ultimo messaggio</span>
               </div>
             </div>
             <div class="actual-time col-2">12:00</div>
@@ -106,9 +106,9 @@
 
         <!-- CHAT -->
         <div class="chat-text">
-          <div class="container-fluid">
+          <div class="my_container-msg">
 
-            <div class="send d-flex flex-column ">
+            <div class="send d-flex flex-column">
               <span class="text">Text</span>
               <span class="actual-time align-self-end">time</span>
             </div>
@@ -123,9 +123,11 @@
 
         <!-- INPUT SEND MESSAGE -->
         <div class="send-message d-flex justify-content-between align-items-center ">
-          <div class="emoji me-4 mb-sm-4">
+
+          <div class="emoji me-4 ms-4">
             <i class="fa-regular fa-face-smile"></i>
           </div>
+
           <div class="input-send flex-grow-1 ">
             <input type="text" placeholder="Scrivi un messaggio">
           </div>
