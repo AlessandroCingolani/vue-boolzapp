@@ -9,6 +9,10 @@ img {
   border-radius: 50%;
 }
 
+i {
+  color: rgb(177, 177, 177);
+}
+
 
 /* Need fix gradient */
 .main-container {
@@ -28,23 +32,42 @@ img {
 .message-block {
   width: calc(100% - 300px);
   height: 100%;
-  background-color: black;
+  background-image: url("/img/mine.jpg");
 }
+
+.chat-text {
+  height: calc(100% - 120px);
+}
+
+.send-message {
+  height: 70px;
+  background-color: rgb(234, 234, 234);
+}
+
 
 
 /* ASIDE */
 aside {
-  background-color: aqua;
+
   width: 400px;
   height: 100%;
 }
 
+.top-aside, .top-message-block {
+  height: 50px;
+  background-color: rgb(234, 234, 234);
+}
+
+.top-aside {
+  border-right: 1px solid rgba(128, 128, 128, 0.597);
+  padding: 10px;
+}
 
 .top-icon-circle {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
   background-color: white;
+  border-radius: 50%;
 }
 
 .notification-block {
@@ -58,13 +81,26 @@ aside {
 
 .research-block > input {
   width: 100%;
+  height: 40px;
 }
 
 .contacts-chat {
-  height: 539px;
+  padding: 20px;
+  height: 525px;
   background-color: brown;
   overflow-y: scroll;
 }
+
+.contact {
+  height: 100px;
+
+}
+
+.chat-profile {
+  width: 60px;
+  height: 60px;
+}
+
 
 
 
