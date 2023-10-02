@@ -29,6 +29,7 @@ i {
 .message-block {
   width: calc(100% - 400px);
   height: 100%;
+  min-width: 374px;
   background-image: url("/img/mine.jpg");
 }
 
@@ -94,9 +95,14 @@ i {
   font-size: .7rem;
 }
 
+.top-message-block img,.top-aside img {
+  margin-right: 10px;
+}
+
 /* ASIDE */
 aside {
   width: 400px;
+  min-width:300px ;
   height: 100%;
 }
 
@@ -106,7 +112,7 @@ aside {
 }
 
 .top-aside, .top-message-block {
-  height: 50px;
+  height: 60px;
   background-color: rgb(234, 234, 234);
 }
 
@@ -124,11 +130,18 @@ aside {
 
 .notification-block {
   padding: 10px;
+  font-size: .8rem;
   background-color: rgb(142, 218, 252);
 }
 
+
 .notification-block i {
   color: rgb(142, 218, 252);
+  font-size: 1.2rem;
+}
+
+.notification-block a {
+  color: rgb(98, 131, 157);
 }
 
 .research-block {

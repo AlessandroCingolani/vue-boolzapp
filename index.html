@@ -53,6 +53,7 @@
         <div class="contacts-chat">
 
           <div 
+          @click="counter = index"
           v-for="(profile,index) in contacts"
           class="contact row justify-content-between">
             <div class="chat-profile col d-flex ">
@@ -60,22 +61,13 @@
               :src="profile.avatar" alt="avatar_1">
               <div class="info">
                 <h6>{{profile.name}}</h6>
-                <span class="last-message">Ultimo messaggio</span>
+                <span class="last-message">{{profile.messages[profile.messages.length - 1].message}}</span>
               </div>
             </div>
             <div class="actual-time col-2">12:00</div>
           </div> 
           
-          
-          
-
-
-          
         </div>
-
-
-
-
       </aside>
       <!-- /ASIDE -->
 
@@ -84,12 +76,12 @@
       <div class="message-block">
         <div class="top-message-block">
 
-          <div class="row justify-content-between align-items-center ">
+          <div class="row h-100  justify-content-between align-items-center ">
 
-            <div class="col d-flex ">
-              <img class="top-icon-circle" src="img/avatar_1.jpg" alt="avatar_1">
+            <div class="col d-flex  align-items-center ">
+              <img class="top-icon-circle" :src="contacts[counter].avatar" alt="avatar_1">
               <div class="info">
-                <h6>Nome</h6>
+                <h6>{{contacts[counter].name}}</h6>
                 <span class="last-login">Ultimo accesso oggi alle 12:00</span>
               </div>
             </div>
@@ -106,15 +98,15 @@
 
         <!-- CHAT -->
         <div class="chat-text">
-          <div v-for="text in contacts" class="my_container-msg">
+          <div class="my_container-msg">
 
-            <div class="send d-flex flex-column">
-              <span class="text">{{text.messages[0].message}}</span>
+            <div v-for="msg in contacts.messages"  class="send d-flex flex-column">
+              <span class="text">{{msg.message}}</span>
               <span class="actual-time align-self-end">15:30</span>
             </div>
 
             <div class="reiceved d-flex flex-column">
-              <span class="text">Lorem ipsum </span>
+              <span class="text"></span>
               <span class="actual-time align-self-end">16:30</span>
             </div>
 
