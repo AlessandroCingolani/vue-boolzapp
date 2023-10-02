@@ -80,6 +80,9 @@ i {
   background-color: white;
 }
 
+.chat-text .actual-time {
+  padding: 0 10px 2px 0;
+}
 
 .actual-time {
   font-size: 12px;
@@ -95,7 +98,6 @@ i {
 aside {
   width: 400px;
   height: 100%;
-  overflow: hidden;
 }
 
 .last-message {
@@ -142,7 +144,7 @@ aside {
 }
 
 .contacts-chat {
-  height: 100%;
+  height: calc(100% - 179px);
   background-color: rgb(255, 255, 255);
   overflow-y: scroll;
 }
