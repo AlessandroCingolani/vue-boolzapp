@@ -11,7 +11,7 @@ i {
 /* Need fix gradient */
 .main-container {
   height: 100vh;
-  background: linear-gradient(to bottom, green, #ff3300);
+  background:linear-gradient(to top, rgb(216, 219, 214) 85%, rgb(0, 150, 136) 15%);
   
 }
 
@@ -32,6 +32,11 @@ i {
 .chat-text {
   height: calc(100% - 120px);
   overflow-y: scroll;
+}
+
+.my_container-msg {
+  width: 85%;
+  margin: 40px auto;
 }
 
 .send-message {
@@ -78,6 +83,11 @@ i {
 aside {
   width: 400px;
   height: 100%;
+}
+
+.last-message {
+  color: rgb(194, 189, 194);
+  font-size: .8rem;
 }
 
 .top-aside, .top-message-block {
