@@ -62,15 +62,19 @@ i {
 
 
 .send,.reiceved {
-  max-width: 200px;
+  max-width: 300px;
   margin-bottom: 10px;
-  border-radius: 10px;
-  
+  border-radius: 10px; 
+  padding:10px 0 0 10px ; 
 }
 
+
 .send {
+  margin-left: auto;
   background-color: rgb(213, 249, 186);
 }
+
+
 
 .reiceved {
   background-color: white;
