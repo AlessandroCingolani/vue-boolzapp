@@ -52,6 +52,19 @@ aside {
   background-color: rgb(142, 218, 252);
 }
 
+.notification-block i {
+  color: rgb(142, 218, 252);
+}
+
+.research-block > input {
+  width: 100%;
+}
+
+.contacts-chat {
+  height: 539px;
+  background-color: brown;
+  overflow-y: scroll;
+}
 
 
 
