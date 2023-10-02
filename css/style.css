@@ -11,6 +11,9 @@ i {
   margin: 0;
 }
 
+input:focus{
+	outline: none;
+}
 
 /* Need fix gradient */
 .main-container {
