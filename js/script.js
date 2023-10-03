@@ -175,7 +175,7 @@ createApp ({
   methods:{
     switchClick(index) {
       this.counter = index
-      this.contacts[index].visible = !this.contacts[index].visible
+      this.contacts[index].visible = true
     }
   },
 
