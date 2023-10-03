@@ -69,8 +69,7 @@
             <div class="chat-profile col d-flex ">
               <img 
               :src="profile.avatar" alt="avatar_1">
-
-              <!-- NEED FIX ACTUAL TIME INSIDE SAME V-IF -->
+              
               <div v-if="profile.messages.length > 0" class="block-info col">
                 <div  class="info">
                   <span class="actual-time f-right">{{profile.messages[profile.messages.length - 1].date}}</span>
