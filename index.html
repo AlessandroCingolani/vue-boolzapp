@@ -71,12 +71,15 @@
               :src="profile.avatar" alt="avatar_1">
 
               <!-- NEED FIX ACTUAL TIME INSIDE SAME V-IF -->
-              <div v-if="profile.messages.length > 0" class="info">
-                <h6>{{profile.name}}</h6>
-                <span class="last-message">{{profile.messages[profile.messages.length - 1].message}}</span>
+              <div v-if="profile.messages.length > 0" class="block-info col">
+                <div  class="info">
+                  <span class="actual-time f-right">{{profile.messages[profile.messages.length - 1].date}}</span>
+                  <h6>{{profile.name}}</h6>
+                  <span class="last-message">{{profile.messages[profile.messages.length - 1].message}}</span>
+                </div>
               </div>
-            </div>
-            <div class="actual-time col-3">{{profile.messages[profile.messages.length - 1].date}}</div>
+
+              </div>
           </div> 
           
         </div>
