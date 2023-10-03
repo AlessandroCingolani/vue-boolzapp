@@ -55,16 +55,17 @@
           <div 
           @click="counter = index"
           v-for="(profile,index) in contacts"
+          :class="(counter === index) ? 'active':'inactive'"
           class="contact row justify-content-between">
             <div class="chat-profile col d-flex ">
               <img 
               :src="profile.avatar" alt="avatar_1">
-              <div class="info">
+              <div v-if="profile.messages.length > 0" class="info">
                 <h6>{{profile.name}}</h6>
                 <span class="last-message">{{profile.messages[profile.messages.length - 1].message}}</span>
               </div>
             </div>
-            <div class="actual-time col-2">12:00</div>
+            <div class="actual-time col-2">{{profile.messages[profile.messages.length - 1].date}}</div>
           </div> 
           
         </div>
