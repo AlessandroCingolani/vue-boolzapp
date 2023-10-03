@@ -177,19 +177,11 @@ createApp ({
   },
 
   computed:{
-    msgSend(){    
-      return this.contacts.map(msg => {
-      msg.messages = msg.messages.filter(item => {
-  
-      return item.status === 'sent';
-      });
-      return msg;
-    });
-    }
+   
   },
   
   mounted() {
-    console.log(this.msgSend);
+    
   }
 
 
