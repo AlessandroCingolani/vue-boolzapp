@@ -1,3 +1,5 @@
+const dt = luxon.DateTime;
+
 const {createApp} = Vue;
 
 createApp ({
@@ -181,9 +183,10 @@ createApp ({
     },
 
     addMessage(){
+      this.time = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT)
       if(this.newMessage.length > 0){
         const newMessageObj = {
-          date:'current date',
+          date:this.time,
           message : this.newMessage,
           status:'sent'
         }
@@ -191,7 +194,7 @@ createApp ({
         this.newMessage = '';
         setTimeout(() => {
           const newReceivedObj = {
-            date:'current date',
+            date:this.time,
             message : 'Ok!',
             status:'received'
           }
