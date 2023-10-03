@@ -55,7 +55,7 @@
           <div 
           @click="counter = index"
           v-for="(profile,index) in contacts"
-          :class="(counter === index) ? 'active':'inactive'"
+          :class="(counter === index) ? 'active':''"
           class="contact row justify-content-between">
             <div class="chat-profile col d-flex ">
               <img 
@@ -99,17 +99,19 @@
 
         <!-- CHAT -->
         <div class="chat-text">
-          <div class="my_container-msg">
+          <div v-for="obj in contacts"  class="my_container-msg">
 
-            <div v-for="(text,index) in msgSend"   class="send d-flex flex-column">
-              <span class="text">{{text.messages[index]}}</span>
-              <span class="actual-time align-self-end">{{text.messages[index]}}</span>
+            <div
+            v-for="(text,index) in obj.messages">
+              <div 
+              :class="text.status"
+              class="chat d-flex flex-column">
+                <span span class="text">{{text.message}}</span>
+                <span class="actual-time align-self-end">12</span>
+              </div>
             </div>
 
-            <div class="reiceved d-flex flex-column">
-              <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quaerat dignissimos esse nulla cumque, quia quisquam quod, autem itaque, laboriosam qui? Officiis aut facere quas. Provident, distinctio! Expedita, numquam ipsa.</span>
-              <span class="actual-time align-self-end">16:30</span>
-            </div>
+          
 
           </div>
         </div>
