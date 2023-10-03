@@ -188,7 +188,16 @@ createApp ({
           status:'sent'
         }
         this.contacts[this.indice].messages.push(newMessageObj)
-        this.newMessage = ''
+        this.newMessage = '';
+        setTimeout(() => {
+          const newReceivedObj = {
+            date:'current date',
+            message : 'Ok!',
+            status:'received'
+          }
+          this.contacts[this.indice].messages.push(newReceivedObj)
+
+        },1000)       
       }
     }
 
