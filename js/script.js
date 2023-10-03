@@ -3,7 +3,7 @@ const {createApp} = Vue;
 createApp ({
   data(){
     return{
-      counter : 0,
+      indic : 0,
       contacts: [
     {
         name: 'Michele',
@@ -174,15 +174,13 @@ createApp ({
 
   methods:{
     switchClick(index) {
-      this.counter = index
+      this.indic = index
       this.contacts[index].visible = true
     }
   },
 
   computed:{
-   chatActive (){
-      return this.contacts.filter(msg => msg.visible)
-   }
+
   },
   
   mounted() {
