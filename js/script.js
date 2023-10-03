@@ -4,6 +4,7 @@ createApp ({
   data(){
     return{
       indice : 0,
+      newMessage:'',
       contacts: [
     {
         name: 'Michele',
@@ -165,7 +166,9 @@ createApp ({
                 status: 'received'
             }
         ],
-    }
+
+      }
+      
 ],
 
 
@@ -175,9 +178,21 @@ createApp ({
   methods:{
     switchClick(index) {
       this.indice = index
-      console.log(this.indice);
-      console.log(this.contacts[this.indice].messages);
+    },
+
+    addMessage(){
+      if(this.newMessage.length > 0){
+        const newMessageObj = {
+          date:'current date',
+          message : this.newMessage,
+          status:'sent'
+        }
+        this.contacts[this.indice].messages.push(newMessageObj)
+        this.newMessage = ''
+      }
     }
+
+
   },
 
   computed:{

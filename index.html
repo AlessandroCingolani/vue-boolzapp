@@ -131,7 +131,12 @@
           </div>
 
           <div class="input-send flex-grow-1 ">
-            <input type="text" placeholder="Scrivi un messaggio">
+            <input 
+            v-model.trim="newMessage"
+            @keyup.enter="addMessage"
+            type="text" 
+            placeholder="Scrivi un messaggio"
+            >
           </div>
 
           <div class="audio me-4 ms-4">
