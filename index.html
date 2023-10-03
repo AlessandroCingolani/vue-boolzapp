@@ -65,7 +65,7 @@
                 <span class="last-message">{{profile.messages[profile.messages.length - 1].message}}</span>
               </div>
             </div>
-            <div class="actual-time col-2">{{profile.messages[profile.messages.length - 1].date}}</div>
+            <div class="actual-time col-3">{{profile.messages[profile.messages.length - 1].date}}</div>
           </div> 
           
         </div>
@@ -101,9 +101,9 @@
         <div class="chat-text">
           <div class="my_container-msg">
 
-            <div  class="send d-flex flex-column">
-              <span class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, provident placeat! Debitis ipsa accusamus perferendis natus nesciunt assumenda ut beatae asperiores magni consequuntur. Provident ut ex quaerat, vel molestias pariatur?</span>
-              <span class="actual-time align-self-end">15:30</span>
+            <div v-for="(text,index) in msgSend"   class="send d-flex flex-column">
+              <span class="text">{{text.messages[index].message}}</span>
+              <span class="actual-time align-self-end">{{text.messages[index]}}</span>
             </div>
 
             <div class="reiceved d-flex flex-column">
