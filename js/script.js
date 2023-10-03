@@ -183,7 +183,7 @@ createApp ({
     },
 
     addMessage(){
-      this.time = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT)
+      this.time = dt.now().setLocale('it').toLocaleString(dt.TIME_SIMPLE)
       if(this.newMessage.length > 0){
         const newMessageObj = {
           date:this.time,
