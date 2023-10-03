@@ -56,6 +56,7 @@
         <!-- aside contact bar -->
         <div class="contacts-chat">
 
+          <!-- LOOP ASIDE CHAT CLICK -->
           <div 
           @click="counter = index"
           v-for="(profile,index) in contacts"
@@ -64,6 +65,8 @@
             <div class="chat-profile col d-flex ">
               <img 
               :src="profile.avatar" alt="avatar_1">
+
+              <!-- NEED FIX ACTUAL TIME INSIDE SAME V-IF -->
               <div v-if="profile.messages.length > 0" class="info">
                 <h6>{{profile.name}}</h6>
                 <span class="last-message">{{profile.messages[profile.messages.length - 1].message}}</span>
@@ -103,10 +106,11 @@
 
         <!-- CHAT -->
         <div class="chat-text">
-          <div v-for="obj in contacts"  class="my_container-msg">
+          <div 
+           v-for="obj in chatActive"  class="my_container-msg">
 
-            <div
-            v-for="(text,index) in obj.messages">
+            <div 
+              v-for="(text,index) in obj.messages">
               <div 
               :class="text.status"
               class="chat d-flex flex-column">
