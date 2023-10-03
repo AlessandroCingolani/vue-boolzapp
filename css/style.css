@@ -42,12 +42,13 @@ input:focus{
 
 .chat-text {
   height: calc(100% - 120px);
+  padding-top: 40px;
   overflow-y: scroll;
 }
 
 .my_container-msg {
   width: 85%;
-  margin: 40px auto;
+  margin: 0 auto;
 }
 
 .send-message {
