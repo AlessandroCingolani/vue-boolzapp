@@ -58,7 +58,7 @@
 
           <!-- LOOP ASIDE CHAT CLICK -->
           <div 
-          @click="counter = index"
+          @click="switchClick(index)"
           v-for="(profile,index) in contacts"
           :class="(counter === index) ? 'active':''"
           class="contact row justify-content-between">
