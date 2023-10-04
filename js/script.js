@@ -203,6 +203,10 @@ createApp ({
 
         },1000)       
       }
+    },
+
+    removeMessage(index){
+      this.contacts.messages[index].splice(index,1);
     }
 
 
