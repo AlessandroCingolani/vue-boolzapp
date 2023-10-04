@@ -221,12 +221,7 @@ createApp ({
       return result;
     }
     
-  },
-  
-  mounted() {
-    
   }
-
-
+  
 
 }).mount('#app')
