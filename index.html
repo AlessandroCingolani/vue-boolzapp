@@ -53,7 +53,10 @@
 
         <!-- Research bar -->
         <div class="research-block">
-          <input type="text" placeholder="&#xF002; Cerca o inizia una nuova chat" style="font-family:Arial, FontAwesome" />
+          <input 
+          v-model.trim="research"
+          type="text" 
+          placeholder="&#xF002; Cerca o inizia una nuova chat" style="font-family:Arial, FontAwesome" />
         </div>
 
 
@@ -63,13 +66,13 @@
           <!-- LOOP ASIDE CHAT CLICK -->
           <div 
           @click="switchClick(index)"
-          v-for="(profile,index) in contacts"
+          v-for="(profile,index) in searchContacts"
           :class="(indice === index) ? 'active':''"
           class="contact row justify-content-between">
             <div class="chat-profile col d-flex ">
               <img 
               :src="profile.avatar" alt="avatar_1">
-              
+
               <div v-if="profile.messages.length > 0" class="block-info col">
                 <div  class="info">
                   <span class="actual-time f-right">{{profile.messages[profile.messages.length - 1].date}}</span>
