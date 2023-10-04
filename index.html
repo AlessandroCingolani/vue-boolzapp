@@ -67,7 +67,7 @@
           <div 
           @click="switchClick(index)"
           v-for="(profile,index) in searchContacts"
-          :class="(indice === index) ? 'active':''"
+          :class="(actualIndex === index) ? 'active':''"
           class="contact row justify-content-between">
             <div class="chat-profile col d-flex ">
               <img 
@@ -96,9 +96,9 @@
           <div class="row h-100  justify-content-between align-items-center ">
 
             <div class="col d-flex  align-items-center ">
-              <img class="top-icon-circle" :src="contacts[indice].avatar" alt="avatar_1">
+              <img class="top-icon-circle" :src="contacts[actualIndex].avatar" alt="avatar_1">
               <div class="info">
-                <h6>{{contacts[indice].name}}</h6>
+                <h6>{{contacts[actualIndex].name}}</h6>
                 <span class="last-login">Ultimo accesso oggi alle 12:00</span>
               </div>
             </div>
@@ -116,7 +116,7 @@
         <!-- CHAT -->
         <div class="chat-text">
           <div 
-           v-for="(text,index) in contacts[indice].messages"  class="my_container-msg">
+           v-for="(text,index) in contacts[actualIndex].messages"  class="my_container-msg">
 
             <div>
               <div 
