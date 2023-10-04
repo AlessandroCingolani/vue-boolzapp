@@ -73,10 +73,10 @@
               <img 
               :src="profile.avatar" alt="avatar_1">
 
-              <div v-if="profile.messages.length > 0" class="block-info col">
-                <div  class="info">
-                  <span class="actual-time f-right">{{profile.messages[profile.messages.length - 1].date}}</span>
-                  <h6>{{profile.name}}</h6>
+              <div  class="block-info col">
+                <h6>{{profile.name}}</h6>
+                <div v-if="profile.messages.length > 0" class="info">
+                  <span class="actual-time">{{profile.messages[profile.messages.length - 1].date}}</span>
                   <span class="last-message">{{profile.messages[profile.messages.length - 1].message}}</span>
                 </div>
               </div>
