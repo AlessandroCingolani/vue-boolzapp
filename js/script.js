@@ -5,7 +5,7 @@ const {createApp} = Vue;
 createApp ({
   data(){
     return{
-      indice : 0,
+      actualIndex : 0,
       newMessage:'',
       research:'',
       contacts: [
@@ -180,7 +180,7 @@ createApp ({
 
   methods:{
     switchClick(index) {
-      this.indice = index
+      this.actualIndex = index
     },
 
     addMessage(){
@@ -191,7 +191,7 @@ createApp ({
           message : this.newMessage,
           status:'sent'
         }
-        this.contacts[this.indice].messages.push(newMessageObj)
+        this.contacts[this.actualIndex].messages.push(newMessageObj)
         this.newMessage = '';
         setTimeout(() => {
           const newReceivedObj = {
@@ -199,14 +199,14 @@ createApp ({
             message : 'Ok!',
             status:'received'
           }
-          this.contacts[this.indice].messages.push(newReceivedObj)
+          this.contacts[this.actualIndex].messages.push(newReceivedObj)
 
         },1000)       
       }
     },
 
     removeMessage(index){
-      this.contacts.messages[index].splice(index,1);
+      this.contacts[this.actualIndex].messages.splice(index,1);
     }
 
 
