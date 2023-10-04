@@ -200,6 +200,12 @@ h6 {
   height: 60px;
 }
 
-.f-right {
-  float: right;
+.block-info {
+  position: relative;
+}
+
+.info .actual-time {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
