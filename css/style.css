@@ -37,7 +37,7 @@ input:focus{
 .message-block {
   width: 65%;
   height: 100%;
-  background-image: url("/img/mine.jpg");
+  background-image: url("../img/mine.jpg");
 }
 
 .chat-text {
