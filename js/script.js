@@ -215,13 +215,13 @@ createApp ({
   computed:{
     searchContacts() {
       const searched = this.research.toLowerCase();
-      const result = this.contacts.filter(itemSearch => {
-        return itemSearch.name.toLowerCase().includes(searched);
+      return this.contacts.filter(itemSearch => {
+      return itemSearch.name.toLowerCase().includes(searched);
       });
-      return result;
     }
     
   }
   
+
 
 }).mount('#app')
